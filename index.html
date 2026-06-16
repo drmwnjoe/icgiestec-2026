@@ -229,8 +229,8 @@
               <h4>Pamphlet</h4>
               <p>View or download the official conference pamphlet with complete information about ICGIESTec 2026.</p>
               <div class="d-flex gap-2 justify-content-center flex-wrap">
-                <a href="assets/documents/pamphlet.pdf" target="_blank" rel="noopener" class="btn-quick-access"><i class="fas fa-eye"></i> View</a>
-                <a href="assets/documents/pamphlet.pdf" download class="btn-quick-access"><i class="fas fa-download"></i> Download</a>
+                <button type="button" class="btn-quick-access" style="background: transparent; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#pamphletModal"><i class="fas fa-eye"></i> View</button>
+                <a href="assets/images/pamflet.jpeg" download class="btn-quick-access"><i class="fas fa-download"></i> Download</a>
               </div>
             </div>
           </div>
@@ -416,10 +416,7 @@
 
         <!-- ─── ADVISORY BOARD ─── -->
         <div class="committee-block" data-aos="fade-up">
-          <div class="committee-block-header advisory">
-            <div class="committee-block-icon"><i class="fas fa-star"></i></div>
-            <h3>Advisory Board</h3>
-          </div>
+          <h3 class="text-center mb-4">Advisory Board</h3>
           <div class="row g-3 justify-content-center">
             <!-- Advisory 1 — replace filename below with actual photo -->
             <div class="col-lg-3 col-md-5 col-sm-6 d-flex" data-aos="fade-up" data-aos-delay="0">
@@ -452,10 +449,7 @@
 
         <!-- ─── STEERING COMMITTEE ─── -->
         <div class="committee-block" data-aos="fade-up">
-          <div class="committee-block-header steering">
-            <div class="committee-block-icon"><i class="fas fa-compass"></i></div>
-            <h3>Steering Committee</h3>
-          </div>
+          <h3 class="text-center mt-5 mb-4">Steering Committee</h3>
           <div class="committee-members-list">
             <div class="committee-member-card steering-member" id="steeringMember1">
               <div class="cmember-avatar" style="background:linear-gradient(135deg,#0D47A1,#1565C0);">
@@ -475,10 +469,7 @@
 
         <!-- ─── SCIENTIFIC COMMITTEE ─── -->
         <div class="committee-block" data-aos="fade-up">
-          <div class="committee-block-header scientific">
-            <div class="committee-block-icon"><i class="fas fa-microscope"></i></div>
-            <h3>Scientific Committee</h3>
-          </div>
+          <h3 class="text-center mt-5 mb-4">Scientific Committee</h3>
           <div class="committee-members-grid">
 
             <div class="committee-member-card" id="sciMember1">
@@ -1199,6 +1190,33 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       PAMPHLET MODAL
+       ============================================================ -->
+  <div class="modal fade" id="pamphletModal" tabindex="-1" aria-labelledby="pamphletModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius: var(--radius-lg); border: none; overflow: hidden; box-shadow: var(--shadow-xl);">
+        <div class="modal-header bg-white" style="border-bottom: 1px solid var(--border-light); padding: 16px 24px;">
+          <h5 class="modal-title" id="pamphletModalLabel" style="font-weight: 700; color: var(--primary); font-family: var(--font-heading);">
+            <i class="fas fa-file-alt me-2 text-warning"></i>ICGIESTec 2026 Pamphlet
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 text-center bg-light-alt" style="position: relative; max-height: 70vh; overflow-y: auto;">
+          <img src="assets/images/pamflet.jpeg" class="img-fluid" alt="ICGIESTec 2026 Pamphlet" style="width: 100%; height: auto; max-height: 100%; object-fit: contain;">
+        </div>
+        <div class="modal-footer bg-white" style="border-top: 1px solid var(--border-light); padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+          <button type="button" class="btn btn-secondary px-4 py-2" data-bs-dismiss="modal" style="border-radius: 50px; font-family: var(--font-heading); font-weight: 600; font-size: 0.85rem;">
+            Close
+          </button>
+          <a href="assets/images/pamflet.jpeg" download="ICGIESTec-2026-Pamphlet.jpeg" class="btn btn-register-nav px-4 py-2" style="margin: 0; box-shadow: var(--shadow-sm);">
+            <i class="fas fa-download me-2"></i>Download Pamphlet
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        BACK TO TOP BUTTON

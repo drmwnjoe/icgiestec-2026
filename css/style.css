@@ -973,12 +973,7 @@ img {
 }
 
 .committee-block {
-  background: var(--bg-white);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--border-light);
-  overflow: hidden;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 }
 
 /* Block header bar */
@@ -1026,12 +1021,12 @@ img {
 
 /* Advisory photo area */
 .committee-block .row {
-  padding: 24px 16px;
+  padding: 24px 0;
 }
 
 /* Member list (Steering — horizontal row) */
 .committee-members-list {
-  padding: 20px 24px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1039,7 +1034,7 @@ img {
 
 /* Member grid (Scientific — multi-column) */
 .committee-members-grid {
-  padding: 20px 24px;
+  padding: 20px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 14px;
