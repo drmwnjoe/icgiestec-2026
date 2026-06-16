@@ -81,6 +81,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -1036,7 +1038,7 @@ img {
 .committee-members-grid {
   padding: 20px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
   gap: 14px;
 }
 
@@ -1176,14 +1178,15 @@ img {
 }
 
 .speaker-photo-wrapper {
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   height: 220px;
   margin: 0 auto 35px;
   position: relative;
 }
 
 .speaker-photo {
-  width: 300px;
+  width: 100%;
   height: 250px;
 
   object-fit: cover;
@@ -2614,6 +2617,54 @@ footer {
 
   .about-stats {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* Fix speaker photo on small screens */
+  .speaker-photo-wrapper {
+    max-width: 180px;
+    height: 190px;
+  }
+
+  .speaker-photo {
+    height: 200px;
+  }
+
+  /* Fix committee grid on small screens */
+  .committee-members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix dates row on small screens */
+  .dates-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date-card {
+    width: 100%;
+    max-width: 280px;
+    flex-direction: row;
+    padding: 14px 16px;
+    gap: 12px;
+    text-align: left;
+    align-items: center;
+  }
+
+  .date-card-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .date-card-label,
+  .date-card-title,
+  .date-card-sub {
+    text-align: left;
+  }
+
+  /* Prevent any element from causing overflow */
+  section, .container, [class*="row"] {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
