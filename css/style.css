@@ -505,6 +505,14 @@ img {
   background-clip: text;
 }
 
+.hero-title .highlight-blue {
+  color: #58a6ff;
+  background: linear-gradient(135deg, #64B5F6 0%, #64B5F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hero-theme {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.85);
@@ -1081,7 +1089,7 @@ img {
   font-size: 1.1rem;
   color: #fff;
   flex-shrink: 0;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Member info */
@@ -1522,13 +1530,13 @@ img {
 
 .date-card-highlight {
   border-color: var(--accent);
-  background: linear-gradient(180deg, rgba(255,193,7,0.05) 0%, var(--bg-white) 100%);
-  box-shadow: 0 4px 20px rgba(255,193,7,0.15);
+  background: linear-gradient(180deg, rgba(255, 193, 7, 0.05) 0%, var(--bg-white) 100%);
+  box-shadow: 0 4px 20px rgba(255, 193, 7, 0.15);
 }
 
 .date-card-highlight:hover {
   border-color: var(--accent-dark);
-  box-shadow: 0 8px 30px rgba(255,193,7,0.25);
+  box-shadow: 0 8px 30px rgba(255, 193, 7, 0.25);
 }
 
 .date-card-icon {
@@ -1542,7 +1550,7 @@ img {
   color: #fff;
   margin-bottom: 12px;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .date-card-label {
@@ -1810,12 +1818,16 @@ img {
   padding: 8px 20px 8px 8px;
   transition: all var(--transition-base);
   box-shadow: var(--shadow-sm);
+  color: inherit;
+  text-decoration: none;
 }
 
 .pub-journal-pill:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: var(--primary);
+  color: inherit;
+  text-decoration: none;
 }
 
 .pub-journal-icon {
@@ -1870,6 +1882,12 @@ img {
   background: rgba(249, 178, 51, 0.1);
   color: var(--accent-dark);
   border: 1px solid rgba(249, 178, 51, 0.2);
+}
+
+.index-sinta5 {
+  background: rgba(236, 72, 153, 0.1);
+  color: #db2777;
+  border: 1px solid rgba(236, 72, 153, 0.2);
 }
 
 .index-proceeding {
@@ -2027,63 +2045,63 @@ img {
   border: 0;
 }
 
-.organized-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:32px;
-  align-items:center;
+.organized-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  align-items: center;
 }
 
-.organized-card{
-  background:#fff;
-  border-radius:20px;
-  padding:32px 24px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.35s ease;
-  border:1px solid #e5e7eb;
+.organized-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+  border: 1px solid #e5e7eb;
 }
 
-.organized-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 40px rgba(0,0,0,0.12);
+.organized-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
-.organized-card img{
-  width:140px;
-  height:140px;
-  object-fit:contain;
-  margin-bottom:20px;
+.organized-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 20px;
 }
 
-.organized-card h4{
-  font-size:1rem;
-  font-weight:700;
-  color:#334155;
-  line-height:1.5;
+.organized-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.5;
 }
 
 
-.organized-logos{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:50px;
+.organized-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
-.logo-item{
-  transition:0.3s ease;
+.logo-item {
+  transition: 0.3s ease;
 }
 
-.logo-item:hover{
-  transform:scale(1.08);
+.logo-item:hover {
+  transform: scale(1.08);
 }
 
-.logo-item img{
-  width:160px;
-  height:160px;
-  object-fit:contain;
+.logo-item img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
 }
 
 /* ============================================================
@@ -2662,7 +2680,9 @@ footer {
   }
 
   /* Prevent any element from causing overflow */
-  section, .container, [class*="row"] {
+  section,
+  .container,
+  [class*="row"] {
     max-width: 100%;
     overflow-x: hidden;
   }
