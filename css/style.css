@@ -750,8 +750,126 @@ img {
 /* About Stats */
 
 /* ============================================================
-   8B. COMMITTEE SECTION
+   8C. SUPPORTED SDGs SECTION
    ============================================================ */
+.sdgs-section {
+  background: var(--bg-white);
+}
+
+/* Logo wrapper — horizontal flex, wraps on mobile */
+.sdgs-logos-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Individual SDG item */
+.sdg-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* The logo image */
+.sdg-logo {
+  width: auto;
+  height: 90px;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  transition:
+    transform var(--transition-spring),
+    box-shadow var(--transition-base),
+    filter var(--transition-base);
+  will-change: transform;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hover: gently scale up + drop shadow glow */
+.sdg-item:hover .sdg-logo {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 12px 32px rgba(13, 71, 161, 0.20), 0 4px 12px rgba(0,0,0,0.12);
+  filter: brightness(1.05);
+}
+
+/* Label beneath each logo */
+.sdg-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: center;
+  max-width: 110px;
+  line-height: 1.4;
+  transition: color var(--transition-base);
+}
+
+.sdg-item:hover .sdg-label {
+  color: var(--primary);
+}
+
+/* Info banner below the logos */
+.sdgs-info-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(13, 71, 161, 0.05) 0%, rgba(25, 118, 210, 0.08) 100%);
+  border: 1px solid rgba(13, 71, 161, 0.12);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.sdgs-banner-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.sdgs-info-banner p {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sdgs-info-banner p strong {
+  color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .sdgs-logos-wrapper {
+    gap: 20px;
+  }
+
+  .sdg-logo {
+    height: 70px;
+  }
+
+  .sdg-label {
+    font-size: 0.65rem;
+    max-width: 85px;
+  }
+
+  .sdgs-info-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 18px 20px;
+    gap: 12px;
+  }
+}
+
+
 #committee {
   background: var(--bg-light);
 }
